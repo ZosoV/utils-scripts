@@ -21,12 +21,15 @@ def compress(file_names,zip_name):
 
     # create the zip file first parameter path/name, second mode
     zf = zipfile.ZipFile(zip_name, mode="w")
+
+    # output path
+    output_path_in_zip = zip_name.split(".")[0]
     try:
         for file_path in file_names:
             file_name = file_path.split("/")[-1]
             # Add file to the zip file
             # first parameter file to zip, second filename in zip
-            zf.write(file_path, "crops/" + file_name, compress_type=compression)
+            zf.write(file_path, output_path_in_zip+ "/" + file_name, compress_type=compression)
 
     except FileNotFoundError:
         print("An error occurred")
