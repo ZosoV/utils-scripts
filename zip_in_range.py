@@ -45,10 +45,10 @@ if __name__ == "__main__":
     for i in range(args.parts):
         if (i != args.parts - 1):
             print("Compress from {} to {}: ".format(i*step,(i+1)*step))
-            compress(files_names[i*step:(i+1)*step],"data_chunck_"+str(i)+".zip")
+            compress(files_names[i*step:(i+1)*step],"data_chunck_{}.zip".format(i + 1))
         else:
             print("Compress from {} to {}: ".format(i*step,len(files_names) - 1))
-            compress(files_names[i*step:len(files_names) - 1],"data_chunck_"+str(i)+".zip")
+            compress(files_names[i*step:len(files_names) - 1],"data_chunck_{}.zip".format(i + 1))
 
     # # file_names= ["test_file.txt", "test_file2.txt"]
     # # compress(file_names)
