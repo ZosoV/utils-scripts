@@ -33,4 +33,4 @@ if __name__ == "__main__":
     print("Not repeated in val: {}".format(len(final_val_list)))
 
     repeated = set(final_train_list) & set(final_val_list)
-    print("Not repeated in val: {}".format(len(final_val_list) - len(repeated)))
+    print("Not repeated in val considering train: {}".format(len(final_val_list) - len(repeated)))
