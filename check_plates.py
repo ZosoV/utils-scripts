@@ -3,7 +3,7 @@ import sys
 import re
 
 
-actual_format = 'BCDFGHJKLPRSTVWXYZ'
+actual_format = 'BCDFGHJKLPRSTVWXYZO'
 past_format_letter1 = 'ABCDEFGHJKLNPRSTUVXYZWMO'
 past_format_letter2 = 'ABCDEFGHIJKLNPRSTUVXYZW'
 
