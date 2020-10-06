@@ -16,5 +16,5 @@ if __name__ == "__main__":
         img_name = img_route.split("/")[-1]
 
         print( "Moving from {} to {}".format(img_route,os.path.join("correct_images",img_name)))
-        shutil.move(img_route,os.path.join("correct_images",img_name))
+        shutil.copyfile(img_route,os.path.join("correct_images",img_name))
         
