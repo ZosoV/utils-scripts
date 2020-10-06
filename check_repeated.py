@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     final_train_list = list(dict.fromkeys(train_list))
 
-    print("Not repeated: {}".format(len(final_train_list)))
+    print("Not repeated in annotations: {}".format(len(final_train_list)))
 
     f = open(val_file, "r")
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         val_list.append(label)
 
     final_val_list = list(dict.fromkeys(val_list))
+    print("Not repeated in val: {}".format(len(val_list)))
 
     repeated = set(final_val_list) & set(final_val_list)
-
     print("Not repeated in val: {}".format(len(val_list) - len(repeated)))
