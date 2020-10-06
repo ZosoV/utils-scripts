@@ -30,7 +30,7 @@ if __name__ == "__main__":
         val_list.append(label)
 
     final_val_list = list(dict.fromkeys(val_list))
-    print("Not repeated in val: {}".format(len(val_list)))
+    print("Not repeated in val: {}".format(len(final_val_list)))
 
-    repeated = set(final_val_list) & set(final_val_list)
-    print("Not repeated in val: {}".format(len(val_list) - len(repeated)))
+    repeated = set(final_train_list) & set(final_val_list)
+    print("Not repeated in val: {}".format(len(final_val_list) - len(repeated)))
