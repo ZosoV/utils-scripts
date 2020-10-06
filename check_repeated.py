@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     final_train_list = list(dict.fromkeys(train_list))
 
-    print("Not repeated: {}".format(len(final_list)))
+    print("Not repeated: {}".format(len(final_train_list)))
 
     f = open(val_file, "r")
 
